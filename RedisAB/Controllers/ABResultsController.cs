@@ -37,6 +37,7 @@ namespace RedisAB.Controllers
                         Name = subKey,
                         Successes = Int32.Parse(await conn.Strings.GetString(0, String.Format("{0}.{1}.success", keyName, subKey))),
                         Total = Int32.Parse(await conn.Strings.GetString(0, String.Format("{0}.{1}", keyName, subKey)))
+
                     });
                 }
                 return View(campaignResults);

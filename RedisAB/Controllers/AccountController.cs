@@ -45,16 +45,16 @@ namespace RedisAB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
-                if (user != null)
-                {
-                    await SignInAsync(user, model.RememberMe);
+                //var user = await UserManager.FindAsync(model.UserName, model.Password);
+                //if (user != null)
+                //{
+                  //  await SignInAsync(user, model.RememberMe);
                     return RedirectToLocal(returnUrl);
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Invalid username or password.");
-                }
+                //}
+                //else
+                //{
+                    //ModelState.AddModelError("", "Invalid username or password.");
+                //}
             }
 
             // If we got this far, something failed, redisplay form
@@ -79,15 +79,16 @@ namespace RedisAB.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser() { UserName = model.UserName };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+              //  var result = await UserManager.CreateAsync(user, model.Password);
+              //  var result = result.Succeeded;
+                if (true)
                 {
                     await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    AddErrors(result);
+                    //AddErrors(result);
                 }
             }
 

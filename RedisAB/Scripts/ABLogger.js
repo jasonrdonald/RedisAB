@@ -16,7 +16,6 @@ var RedisAB;
     })();
     RedisAB.ABLogger = ABLogger;
 })(RedisAB || (RedisAB = {}));
-
 $(function () {
     $("a[data-view-name][data-action-name]").on("click", function () {
         var viewName = $(this).attr("data-view-name");
