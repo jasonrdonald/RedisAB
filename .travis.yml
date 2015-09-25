@@ -6,5 +6,6 @@ mono:
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore RedisAB.sln 
+  - nuget restore RedisAB.sln
+  
  
