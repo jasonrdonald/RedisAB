@@ -4,12 +4,7 @@ node_js:
 solution: RedisAB.sln 
 mono:
   - latest
-
-before_install:
-  - sudo apt-get install nunit-console
-before_script:
-  - nuget restore RedisAB.sln
-  deploy:
+deploy:
    edge: true
    provider: cloudfoundry
    username: jasonrdonald@yahoo.co.in
@@ -17,4 +12,10 @@ before_script:
    api: https://api.run.pivotal.io
    organization: Techavengers
    space: development
+
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore RedisAB.sln
+  
  
