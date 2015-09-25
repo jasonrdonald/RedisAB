@@ -1,7 +1,6 @@
 language: csharp
 node_js: 
  - '0.10' 
-
 solution: RedisAB.sln 
 mono:
   - latest
