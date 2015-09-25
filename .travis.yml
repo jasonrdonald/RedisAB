@@ -12,14 +12,11 @@ deploy:
    api: https://api.run.pivotal.io
    organization: Techavengers
    space: development
+      on:
+    repo: RedisAB.sln
 
 before_install:
   - sudo apt-get install nunit-console
 before_script:
   - nuget restore RedisAB.sln
-  
-after_script:
-  - cf push RedisAB -b https://github.com/Sujithkumarreddy/RedisAB.git
-  
- 
 
