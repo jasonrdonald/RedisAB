@@ -1,0 +1,10 @@
+language: csharp
+solution: RedisAB.sln 
+mono:
+  - latest
+
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore RedisAB.sln 
+ 
