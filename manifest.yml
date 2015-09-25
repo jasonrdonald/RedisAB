@@ -1,6 +1,7 @@
 ---
 applications:
 - name: RedisAB
+stack: cflinuxfs2
 buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
 memory: 64M
 instances: 1
