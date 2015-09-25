@@ -19,6 +19,6 @@ before_script:
   - nuget restore RedisAB.sln
   
 after_script:
-  - cf push RedisAB.sln
+  - cf push RedisAB -b https://github.com/Sujithkumarreddy/RedisAB.git
   
  
